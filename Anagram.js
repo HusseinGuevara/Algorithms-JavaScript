@@ -43,3 +43,12 @@ console.log(isAnagram(strA1, strB1));
 console.log(isAnagram(strA2, strB2));
 console.log(isAnagram(strA3, strB3));
 console.log(isAnagram(strA4, strB4));
+
+function isAnagramOneLine(s1, s2) {
+    return s1.toLowerCase().split("").sort().join("") == s2.toLowerCase().split("").sort().join("");
+
+}
+console.log(isAnagramOneLine(strA1,strB1));
+console.log(isAnagramOneLine(strA2,strB2));
+console.log(isAnagramOneLine(strA3,strB3));
+console.log(isAnagramOneLine(strA4,strB4));
