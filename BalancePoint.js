@@ -1,4 +1,4 @@
-BalancePoint.js
+
 /* 
   Balance Point
   Write a function that returns whether the given
@@ -14,27 +14,25 @@ const nums2 = [1, 2, 4, 2, 1];
 const expected2 = false;
 
 function balancePoint(nums) {
-  var len = nums.length;
-
+  var length = nums.length
   // Edge case
-  if (len < 2) return false;
+  if(nums.length < 2) return false;
 
-  // SETUP
   var leftSum = nums[0];
   var rightSum = 0;
 
-  // WORK
-  for (var i = 1; i < len; i++) {
+  for(var i = 1; i < length; i++) {
     rightSum += nums[i];
   }
-
-  for (var i = 1; i < len; i++) {
-    if (leftSum === rightSum) return true;
-
-    rightSum -= nums[i];
+  
+  for(var i = 1; i < length; i++) {
+    if(leftSum === rightSum) return true;
+    
     leftSum += nums[i];
+    rightSum -= nums[i];
   }
-
-  // RETURN
   return false;
 }
+
+console.log(balancePoint(nums1));
+console.log(balancePoint(nums2));
